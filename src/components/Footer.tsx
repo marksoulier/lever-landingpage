@@ -15,13 +15,13 @@ export const Footer = () => {
         <div className="flex justify-end gap-6 max-md:flex-col">
           <div className="w-[15%] max-md:w-full">
             <div className="flex flex-col items-start text-base leading-8 text-gray-600 max-md:mt-10">
-              <h3 className="text-lg font-medium leading-loose text-black">
+              <h3 className="text-lg font-medium leading-loose text-black font-['Poppins']">
                 Product
               </h3>
-              <a href="#pricing" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white">
+              <a href="#pricing" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
                 Pricing
               </a>
-              <a href="#technology" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white">
+              <a href="#technology" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
                 Technology
               </a>
             </div>

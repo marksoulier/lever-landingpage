@@ -2,6 +2,7 @@
 import * as React from "react";
 import Example from "../assets/Example.png";
 import Example2 from "../assets/Example2.png";
+import { Button } from "./Button";
 
 const KnowledgeGraphExplanation: React.FC = () => {
   return (
@@ -34,9 +35,9 @@ const KnowledgeGraphExplanation: React.FC = () => {
         </p>
         <p className="mt-4">Learn more by reading our article</p>
       </div>
-      <button className="relative text-base font-bold rounded-3xl bg-stone-300 h-[60px] text-white w-[177px] hover:bg-stone-350 transition-all duration-300 ease-in-out cursor-pointer shadow-[0_4px_15px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_25px_rgba(0,0,0,0.3)]">
-        Learn More
-      </button>
+      <div className="flex justify-center mt-10">
+        <Button variant="outline" href="https://cal.com/lever-ai/lever-ai-demo">Learn More</Button>
+      </div>
     </article>
   );
 };
@@ -67,8 +68,8 @@ export const TechnologySection: React.FC = () => {
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Poppins:wght@400;700&display=swap"
         rel="stylesheet"
       />
-      <section className="px-5 py-10 mx-auto my-0 max-w-[1400px] mt-60">
-        <h1 className="mb-16 text-4xl font-medium text-center max-sm:text-3xl text-[var(--accent-950)]">
+      <section className="px-5 py-10 mx-auto my-0 max-w-[1400px] mt-60" id="technology">
+        <h1 className="mb-16 text-4xl font-medium text-center max-sm:text-3xl text-[var(--accent-950)] font-['Poppins']">
           Technology
         </h1>
         <div className="flex gap-24 max-md:flex-col">

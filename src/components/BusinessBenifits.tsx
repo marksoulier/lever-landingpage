@@ -7,12 +7,12 @@ import time from "../assets/time.png";
 export const MaximizeRevenue: React.FC = () => {
     return (
         <section className="flex gap-5 max-md:flex-col">
-            <div className="w-2/5 max-md:ml-0 max-md:w-full">
+            <div className="w-3/5 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col mt-14 max-md:mt-10">
-                    <h2 className="self-start text-3xl text-center text-black leading-[70px]">
+                    <h2 className="self-start text-5xl text-center text-black leading-[70px] font-['Poppins']">
                         Maximize Revenue
                     </h2>
-                    <p className="mt-7 text-base leading-8 text-black">
+                    <p className="mt-7 text-base leading-8 text-black font-['Spline_Sans']">
                         Plan your business decisions around your current business systems
                         for maximum revenue.{" "}
                     </p>
@@ -49,10 +49,10 @@ export const SaveTime: React.FC = () => {
             </div>
             <div className="ml-5 w-[42%] max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col self-stretch my-auto max-md:mt-10">
-                    <h2 className="self-start text-3xl text-center text-black leading-[70px]">
+                    <h2 className="self-start text-5xl text-center text-black leading-[70px] font-['Poppins']">
                         Save Time
                     </h2>
-                    <p className="mt-6 text-base leading-8 text-black">
+                    <p className="mt-6 text-base leading-8 text-black font-['Spline_Sans']">
                         Make your business systems more efficient to save time and money{" "}
                     </p>
                 </div>

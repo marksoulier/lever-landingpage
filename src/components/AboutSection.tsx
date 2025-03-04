@@ -1,9 +1,13 @@
 import React from "react";
 import { TeamMember } from "./TeamMember";
+import { Button } from "./Button";
+import mark_photo from '../assets/mark_photo.jpg';
+import jared from '../assets/jared.jpg';
+
 
 export const AboutSection = () => {
   return (
-    <section className="mt-24 text-4xl font-medium leading-none text-center text-black max-md:mt-10">
+    <section className="mt-24 text-4xl font-medium leading-none text-center text-black max-md:mt-10" id="about">
       <h2>About</h2>
       <div className="mt-24 ml-4 w-full max-w-[1215px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
@@ -42,26 +46,26 @@ export const AboutSection = () => {
           <div className="w-6/12 max-md:w-full">
             <TeamMember
               name="Mark Soulier"
-              role="CEO / Data Analyst"
-              email="mark.soulier@lever-ai.com"
+              role="Data Analyst"
+              email="mark.soulier@usu.com"
               linkedin="www.linkedin.com/in/marksoulier"
-              image="https://cdn.builder.io/api/v1/image/assets/7cbfb130182046beab226ee58fb45705/5b63525413af96bd8900355c1ca38661a247c286f50b9072f566de6efe7cf73e?placeholderIfAbsent=true"
+              image={mark_photo}
             />
           </div>
           <div className="w-6/12 max-md:w-full">
             <TeamMember
               name="Jared Smith"
-              role="CEO / Data Analyst"
-              email="mark.soulier@lever-ai.com"
-              linkedin="www.linkedin.com/in/marksoulier"
-              image="https://cdn.builder.io/api/v1/image/assets/7cbfb130182046beab226ee58fb45705/5b63525413af96bd8900355c1ca38661a247c286f50b9072f566de6efe7cf73e?placeholderIfAbsent=true"
+              role="Developer"
+              email="smithvjared@gmail.com"
+              linkedin="www.linkedin.com/in/jared-smith-07baab229"
+              image={jared}
             />
           </div>
         </div>
       </div>
-      <button className="relative text-base font-bold rounded-3xl bg-stone-300 h-[60px] text-white w-[177px] hover:bg-stone-350 transition-all duration-300 ease-in-out mt-10 cursor-pointer shadow-[0_4px_15px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_25px_rgba(0,0,0,0.3)]">
-        Contact Us
-      </button>
+      <div className="flex justify-center mt-20">
+        <Button variant="outline" href="https://cal.com/lever-ai/lever-ai-demo">Contact Us</Button>
+      </div>
     </section>
   );
 };

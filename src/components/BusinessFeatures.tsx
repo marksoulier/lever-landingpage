@@ -21,10 +21,10 @@ export const BusinessFeatures: React.FC = () => {
                     />
                 </div>
                 <article className="flex-1 max-w-[429px] max-md:max-w-full">
-                    <h2 className="mb-6 text-4xl font-medium text-black leading-[50px] max-md:text-3xl max-md:leading-10 max-sm:text-2xl max-sm:leading-9">
-                        Your business your way
+                    <h2 className="mb-6 text-5xl font-medium text-black leading-[50px] max-md:text-3xl max-md:leading-10 max-sm:text-2xl max-sm:leading-9 font-['Poppins']">
+                        Your business Your way
                     </h2>
-                    <p className="mb-8 text-base leading-8 text-gray-600 max-sm:text-sm max-sm:leading-7">
+                    <p className="mb-8 text-base leading-8 text-gray-600 max-sm:text-sm max-sm:leading-7 font-['Spline_Sans']">
                         Lever software molds around your business systems to give you a
                         single point of data retrieval and AI business understanding.
                     </p>

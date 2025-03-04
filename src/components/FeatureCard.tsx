@@ -9,7 +9,7 @@ export const FeatureCard = () => {
           alt="CRM Icon"
           className="object-contain shrink-0 rounded-none aspect-square w-[55px]"
         />
-        <h2 className="my-auto">CRM</h2>
+        <h2 className="my-auto font-['Poppins']">CRM</h2>
       </div>
       <div className="w-0.5 h-full bg-gray-200" />
       <div className="flex gap-9 self-stretch my-auto">
@@ -18,7 +18,7 @@ export const FeatureCard = () => {
           alt="Logistics Icon"
           className="object-contain shrink-0 rounded-none aspect-square w-[55px]"
         />
-        <h2 className="my-auto basis-auto">Logistics</h2>
+        <h2 className="my-auto basis-auto font-['Poppins']">Logistics</h2>
       </div>
       <div className="w-0.5 h-full bg-gray-200" />
       <div className="flex gap-9 self-stretch my-auto">
@@ -27,7 +27,7 @@ export const FeatureCard = () => {
           alt="Assets Icon"
           className="object-contain shrink-0 rounded-none aspect-square w-[55px]"
         />
-        <h2 className="my-auto">Assets</h2>
+        <h2 className="my-auto font-['Poppins']">Assets</h2>
       </div>
     </section>
   );
