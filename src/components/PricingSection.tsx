@@ -46,7 +46,7 @@ export const PricingSection = () => {
 
   return (
     <section className="mt-16 w-full max-w-[1084px] max-md:mt-10 max-md:max-w-full">
-      <h2 className="text-4xl font-medium leading-none text-center text-black mb-5">
+      <h2 className="text-6xl font-medium leading-none text-center text-black mb-5">
         Choose Your Plan
       </h2>
       <p className="mt-5 text-base leading-8 text-center text-gray-600 w-[555px] mx-auto max-md:max-w-full">

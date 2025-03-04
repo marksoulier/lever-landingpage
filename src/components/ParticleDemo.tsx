@@ -123,9 +123,9 @@ export const DemoParticles: React.FC<ParticlesComponentProps> = ({
                                 distance: 100,
                                 size: 3.5,
                                 duration: 0.2,
-                                opacity: 0.9,
-                                color: "#dd6c02"
-                            }
+                                opacity: 1.0,
+                                color: "#3ccadd"
+                            },
                         }
                     },
                     detectRetina: true

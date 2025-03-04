@@ -8,7 +8,7 @@ export const AboutSection = () => {
       <div className="mt-24 ml-4 w-full max-w-[1215px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           <div className="w-[62%] max-md:w-full">
-            <article className="text-base leading-8 text-black">
+            <article className="text-base leading-8 text-[var(--accent-700)]">
               <p>
                 Lever is a startup with a mission to help small to medium size
                 business be competitive in a data driven economy. Because of the
@@ -28,7 +28,7 @@ export const AboutSection = () => {
               </p>
             </article>
           </div>
-          <div className="ml-5 w-[38%] max-md:ml-0 max-md:w-full">
+          <div className="ml-5 w-[38%] max-md:ml-0 max-md:w-full mt-20">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/7cbfb130182046beab226ee58fb45705/86c8fd25c6f2b79461c969200762b3d0c4c53fdd1acfcbbf9b4751f0a89cd531?placeholderIfAbsent=true"
               alt="About Us Illustration"
@@ -37,7 +37,7 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-      <div className="mt-48 max-w-full w-[676px] max-md:mt-10">
+      <div className="mt-48 max-w-full w-[676px] max-md:mt-10 mx-auto">
         <div className="flex gap-5 max-md:flex-col">
           <div className="w-6/12 max-md:w-full">
             <TeamMember
@@ -59,7 +59,7 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-      <button className="px-11 py-4 mt-9 max-w-full text-base font-bold text-white bg-stone-300 rounded-3xl w-[177px] hover:bg-stone-400">
+      <button className="relative text-base font-bold rounded-3xl bg-stone-300 h-[60px] text-white w-[177px] hover:bg-stone-350 transition-all duration-300 ease-in-out mt-10 cursor-pointer shadow-[0_4px_15px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_25px_rgba(0,0,0,0.3)]">
         Contact Us
       </button>
     </section>

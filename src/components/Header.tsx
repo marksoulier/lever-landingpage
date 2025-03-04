@@ -11,22 +11,22 @@ export const Header = () => {
       />
       <div className="flex items-center gap-8">
         <nav className="flex items-center">
-          <div className="flex gap-4 text-gray-300 mr-4">
+          <div className="flex gap-4 text-gray-300 mr-3">
             <a
               href="#pricing"
-              className="px-3 py-1.5 transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:text-[var(--primary-500)] hover:bg-white"
+              className="px-5 py-1.5 transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:text-[var(--primary-500)] hover:bg-white"
             >
               Pricing
             </a>
             <a
               href="#about"
-              className="px-3 py-1.5 transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:text-[var(--primary-500)] hover:bg-white"
+              className="px-5 py-1.5 transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:text-[var(--primary-500)] hover:bg-white"
             >
               About
             </a>
             <a
               href="#technology"
-              className="px-3 py-1.5 transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:text-[var(--primary-500)] hover:bg-white"
+              className="px-5 py-1.5 transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:text-[var(--primary-500)] hover:bg-white"
             >
               Technology
             </a>

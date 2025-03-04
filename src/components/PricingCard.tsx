@@ -18,7 +18,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   return (
     <article
       className={`flex flex-col items-center px-14 py-14 mx-auto w-full text-sm text-gray-600 bg-white rounded-xl border-2 ${isPopular ? "border-sky-400" : "border-zinc-300"
-        } max-md:px-5 max-md:mt-10 shadow-lg backdrop-blur-sm`}
+        } max-md:px-5 max-md:mt-30 shadow-lg backdrop-blur-sm`}
     >
       <img
         src={imageSrc}

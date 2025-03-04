@@ -7,6 +7,9 @@ import { PricingSection } from "./PricingSection";
 import { TechnologySection } from "./TechnologySection";
 import { AboutSection } from "./AboutSection";
 import { Footer } from "./Footer";
+import { BusinessFeatures } from "./BusinessFeatures";
+import { PageBreaker } from "./PageBreaker";
+import BusinessBenefits from "./BusinessBenifits";
 
 export default function Landingpage() {
   return (
@@ -19,9 +22,14 @@ export default function Landingpage() {
         <Header />
         <HeroSection />
         <FeatureCard />
+        <BusinessFeatures />
+        <PageBreaker className="my-20" />
+        <BusinessBenefits />
         <PricingSection />
         <TechnologySection />
+        <PageBreaker className="my-20" />
         <AboutSection />
+        <PageBreaker className="my-20" />
         <Footer />
       </div>
     </main>
