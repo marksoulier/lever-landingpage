@@ -2,7 +2,7 @@ import React from "react";
 
 export const FeatureCard = () => {
   return (
-    <section className="flex flex-wrap gap-5 justify-between items-center self-stretch px-20 py-9 mt-28 w-full text-2xl font-bold leading-tight text-black bg-white rounded-xl shadow-[0px_4px_4px_rgba(0,0,0,0.25)] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+    <section className="flex flex-wrap gap-5 justify-between items-center self-stretch px-20 py-9 mt-28 w-full text-2xl font-bold leading-tight text-black bg-white rounded-xl shadow-[5px_6px_40px_rgba(0,0,0,0.1)] max-md:px-5 max-md:mt-10 max-md:max-w-full">
       <div className="flex gap-8 self-stretch my-auto">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/7cbfb130182046beab226ee58fb45705/5fe88bf25489b5d209322a629eb2259734eb0d8ed76c77cb55b71f6c3efa6baa?placeholderIfAbsent=true"

@@ -9,53 +9,32 @@ export const Header = () => {
         alt="Company Logo"
         className="object-contain w-[89px] h-auto"
       />
-      <div className="flex items-center gap-16">
+      <div className="flex items-center gap-8">
         <nav className="flex items-center">
-          <div className="flex gap-12" style={{ color: 'var(--accent-200)' }}>
+          <div className="flex gap-4 text-gray-300 mr-4">
             <a
               href="#pricing"
-              className="transition-colors duration-300 ease-in-out cursor-pointer"
-              style={{
-                '&:hover': {
-                  color: 'var(--accent-500)'
-                }
-              }}
+              className="px-3 py-1.5 transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:text-[var(--primary-500)] hover:bg-white"
             >
               Pricing
             </a>
             <a
               href="#about"
-              className="transition-colors duration-300 ease-in-out cursor-pointer"
-              style={{
-                '&:hover': {
-                  color: 'var(--accent-500)'
-                }
-              }}
+              className="px-3 py-1.5 transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:text-[var(--primary-500)] hover:bg-white"
             >
               About
             </a>
             <a
               href="#technology"
-              className="transition-colors duration-300 ease-in-out cursor-pointer"
-              style={{
-                '&:hover': {
-                  color: 'var(--accent-500)'
-                }
-              }}
+              className="px-3 py-1.5 transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:text-[var(--primary-500)] hover:bg-white"
             >
               Technology
             </a>
           </div>
         </nav>
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-4 items-center">
           <button
-            className="font-semibold transition-colors duration-300 ease-in-out cursor-pointer"
-            style={{
-              color: 'var(--accent-400)',
-              '&:hover': {
-                color: 'var(--accent-700)'
-              }
-            }}
+            className="px-3 py-1.5 font-semibold transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white"
           >
             Sign In
           </button>

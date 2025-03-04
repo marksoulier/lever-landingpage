@@ -18,7 +18,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   return (
     <article
       className={`flex flex-col items-center px-14 py-14 mx-auto w-full text-sm text-gray-600 bg-white rounded-xl border-2 ${isPopular ? "border-sky-400" : "border-zinc-300"
-        } max-md:px-5 max-md:mt-10`}
+        } max-md:px-5 max-md:mt-10 shadow-lg backdrop-blur-sm`}
     >
       <img
         src={imageSrc}
@@ -43,8 +43,8 @@ export const PricingCard: React.FC<PricingCardProps> = ({
       </p>
       <button
         className={`px-16 py-3.5 mt-4 max-w-full text-base font-bold whitespace-nowrap rounded-[50px] w-[178px] max-md:px-5 ${isPopular
-            ? "text-white bg-sky-400 hover:bg-sky-500"
-            : "text-sky-400 border-2 border-sky-400 hover:bg-sky-50"
+          ? "text-white bg-sky-400 hover:bg-sky-500"
+          : "text-sky-400 border-2 border-sky-400 hover:bg-sky-50"
           }`}
       >
         Select

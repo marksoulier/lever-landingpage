@@ -15,7 +15,7 @@ export default function Landingpage() {
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Poppins:wght@500&display=swap"
         rel="stylesheet"
       />
-      <div className="px-5 py-0 mx-auto my-0 max-w-[1140px]">
+      <div className="px-5 py-0 mx-auto my-0 max-w-[1140px] z-1">
         <Header />
         <HeroSection />
         <FeatureCard />

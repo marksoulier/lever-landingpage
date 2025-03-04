@@ -1,9 +1,11 @@
 import React from "react";
+import { DemoParticles } from "./ParticleDemo";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="px-8 py-20">
-      <div className="max-w-[411px] text-left">
+    <section className="px-8 py-20 flex items-stretch gap-8">
+      {/* Left content section - fixed width */}
+      <div className="w-[411px] flex-shrink-0">
         <h1 className="mb-5 text-4xl font-medium text-black leading-[70px] max-md:text-3xl max-md:leading-[50px] max-sm:text-2xl max-sm:leading-10">
           AI forward business intelligence
         </h1>
@@ -17,6 +19,13 @@ export const HeroSection: React.FC = () => {
         >
           Request a Demo
         </button>
+      </div>
+
+      {/* Right section - takes remaining space */}
+      <div className="flex-1 min-h-[400px] flex">
+        <div className="flex-1 relative bg-white/80 backdrop-blur-sm rounded-xl">
+          <DemoParticles className="flex-1" />
+        </div>
       </div>
     </section>
   );
