@@ -34,7 +34,7 @@ export const Header = () => {
         </nav>
         <div className="flex gap-4 items-center">
           <a
-            href="https://accounts.google.com"
+            href="http://localhost:5173/dynamic-frontend/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1.5 font-semibold transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white"
