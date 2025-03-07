@@ -69,7 +69,7 @@ export const TechnologySection: React.FC = () => {
         rel="stylesheet"
       />
       <section className="px-5 py-10 mx-auto my-0 max-w-[1400px] mt-60" id="technology">
-        <h1 className="mb-16 text-4xl font-medium text-center max-sm:text-3xl text-[var(--accent-950)] font-['Poppins']">
+        <h1 className="mb-16 text-5xl font-medium text-center max-sm:text-3xl text-[var(--accent-950)] font-['Poppins']">
           Technology
         </h1>
         <div className="flex gap-24 max-md:flex-col">

@@ -6,11 +6,11 @@ export const HeroSection: React.FC = () => {
     <section className="px-8 py-20 mt-12 flex items-stretch gap-8">
       {/* Left content section - fixed width */}
       <div className="w-[411px] flex-shrink-0">
-        <h1 className="mb-5 text-6xl font-medium text-black leading-[70px] max-md:text-3xl max-md:leading-[50px] max-sm:text-2xl max-sm:leading-10 font-['Poppins']">
-          AI forward business intelligence
+        <h1 className="mb-5 text-7xl font-medium text-black leading-[80px] max-md:text-4xl max-md:leading-[60px] max-sm:text-3xl max-sm:leading-12 font-['Poppins']">
+          Your personal private <span className="bg-gradient-to-r from-[var(--primary-400)] to-[var(--secondary-400)] bg-clip-text text-transparent">business</span> AI
         </h1>
-        <p className="mb-6 text-base leading-8 text-black text-opacity-60 font-['Spline_Sans']">
-          All your business data together for understanding and optimizing
+        <p className="mb-6 text-lg leading-9 text-black text-opacity-60 max-md:text-base max-md:leading-8 max-sm:text-base max-sm:leading-7 font-['Spline_Sans']">
+          All your business data in one place for understanding and optimizing decisions
         </p>
         <a
           href="https://cal.com/lever-ai/lever-ai-demo"

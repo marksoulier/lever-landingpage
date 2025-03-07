@@ -1,13 +1,16 @@
 import React from 'react';
-import { BackgroundParticles } from './components/BackgroundParticles';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landingpage from './components/Landingpage';
+import { ArticlePage } from './components/ArticlePage';
 
 function App() {
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden">
-      <BackgroundParticles />
-      <Landingpage />
-    </div >
+    <Router basename="/lever-landingpage">
+      <Routes>
+        <Route path="/" element={<Landingpage />} />
+        <Route path="/articles/:slug" element={<ArticlePage />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -7,7 +7,7 @@ import jared from '../assets/jared.jpg';
 
 export const AboutSection = () => {
   return (
-    <section className="mt-24 text-4xl font-medium leading-none text-center text-black max-md:mt-10" id="about">
+    <section className="mt-24 text-5xl font-medium leading-none text-center text-black max-md:mt-10" id="about">
       <h2>About</h2>
       <div className="mt-24 ml-4 w-full max-w-[1215px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">

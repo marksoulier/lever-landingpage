@@ -1,14 +1,21 @@
 import React from "react";
 
 export const Footer = () => {
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="flex flex-wrap gap-10 self-stretch px-20 pt-14 pb-24 mt-10 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
       <div className="self-start text-base leading-8 text-center text-gray-400">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/7cbfb130182046beab226ee58fb45705/66109427f51d13b61bfcf5f51a0cc5377af2ea28b77ffdea345e1dfec9d3c541?placeholderIfAbsent=true"
-          alt="Company Logo"
-          className="object-contain aspect-[2.28] w-[89px] max-md:mr-2"
-        />
+        <a href="/" onClick={scrollToTop} className="cursor-pointer">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/7cbfb130182046beab226ee58fb45705/66109427f51d13b61bfcf5f51a0cc5377af2ea28b77ffdea345e1dfec9d3c541?placeholderIfAbsent=true"
+            alt="Company Logo"
+            className="object-contain aspect-[2.28] w-[89px] max-md:mr-2"
+          />
+        </a>
         <p className="mt-8 max-md:mt-4">©2025Lever</p>
       </div>
       <nav className="flex-auto max-md:max-w-full ml-auto">
@@ -31,16 +38,16 @@ export const Footer = () => {
               <h3 className="text-lg font-medium leading-loose text-black">
                 Engage
               </h3>
-              <a href="#faq" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white">
+              <a href="#faq" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
                 FAQ
               </a>
-              <a href="#about" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white">
+              <a href="#about" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
                 About Us
               </a>
-              <a href="#privacy" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white">
+              <a href="#privacy" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
                 Privacy Policy
               </a>
-              <a href="#terms" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white">
+              <a href="#terms" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
                 Terms of Service
               </a>
             </div>
@@ -52,7 +59,7 @@ export const Footer = () => {
               </h3>
               <a
                 href="#partner"
-                className="mt-3 text-base leading-8 text-gray-600 hover:text-[var(--primary-500)] hover:bg-white"
+                className="mt-3 text-base leading-8 text-gray-600 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']"
               >
                 Become a Partner
               </a>

@@ -7,9 +7,9 @@ import time from "../assets/time.png";
 export const MaximizeRevenue: React.FC = () => {
     return (
         <section className="flex gap-5 max-md:flex-col">
-            <div className="w-3/5 max-md:ml-0 max-md:w-full">
+            <div className="w-1/2 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col mt-14 max-md:mt-10">
-                    <h2 className="self-start text-5xl text-center text-black leading-[70px] font-['Poppins']">
+                    <h2 className="self-start text-5xl text-black leading-[70px] font-['Poppins']">
                         Maximize Revenue
                     </h2>
                     <p className="mt-7 text-base leading-8 text-black font-['Spline_Sans']">
@@ -18,8 +18,8 @@ export const MaximizeRevenue: React.FC = () => {
                     </p>
                 </div>
             </div>
-            <div className="ml-5 w-3/5 max-md:ml-0 max-md:w-full">
-                <div className="flex justify-center w-full">
+            <div className="w-1/2 max-md:ml-0 max-md:w-full">
+                <div className="flex justify-center items-center w-full h-full">
                     <div className="relative inline-block">
                         <div className="rounded-2xl shadow-[5px_6px_40px_rgba(0,0,0,0.1)] bg-white absolute w-full h-full -z-10 scale-[0.95] origin-top-left translate-x-[5px] translate-y-[5px]" />
                         <img
@@ -37,19 +37,21 @@ export const MaximizeRevenue: React.FC = () => {
 export const SaveTime: React.FC = () => {
     return (
         <section className="flex gap-5 max-md:flex-col mb-30">
-            <div className="w-[58%] max-md:ml-0 max-md:w-full">
-                <div className="relative inline-block">
-                    <div className="rounded-2xl shadow-[5px_6px_40px_rgba(0,0,0,0.1)] bg-white absolute w-full h-full -z-10 scale-[0.95] origin-top-left translate-x-[5px] translate-y-[5px]" />
-                    <img
-                        src={time}
-                        alt="Time Saving Illustration"
-                        className="object-contain h-auto max-h-[300px]"
-                    />
+            <div className="w-1/2 max-md:ml-0 max-md:w-full">
+                <div className="flex justify-center items-center w-full h-full">
+                    <div className="relative inline-block">
+                        <div className="rounded-2xl shadow-[5px_6px_40px_rgba(0,0,0,0.1)] bg-white absolute w-full h-full -z-10 scale-[0.95] origin-top-left translate-x-[5px] translate-y-[5px]" />
+                        <img
+                            src={time}
+                            alt="Time Saving Illustration"
+                            className="object-contain h-auto max-h-[300px]"
+                        />
+                    </div>
                 </div>
             </div>
-            <div className="ml-5 w-[42%] max-md:ml-0 max-md:w-full">
+            <div className="w-1/2 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col self-stretch my-auto max-md:mt-10">
-                    <h2 className="self-start text-5xl text-center text-black leading-[70px] font-['Poppins']">
+                    <h2 className="self-start text-5xl text-black leading-[70px] font-['Poppins']">
                         Save Time
                     </h2>
                     <p className="mt-6 text-base leading-8 text-black font-['Spline_Sans']">

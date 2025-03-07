@@ -110,7 +110,7 @@ export const BackgroundParticles: React.FC = () => {
                             type: "circle"
                         },
                         opacity: {
-                            value: 0.15,
+                            value: 0.05,
                             random: false,
                             animation: {
                                 enable: true,
@@ -131,9 +131,9 @@ export const BackgroundParticles: React.FC = () => {
                         },
                         links: {
                             enable: true,
-                            distance: 50,
+                            distance: 100,
                             color: "#000000",
-                            opacity: 0.1,
+                            opacity: 0.05,
                             width: 0.2
                         },
                         move: {
@@ -163,15 +163,15 @@ export const BackgroundParticles: React.FC = () => {
                             grab: {
                                 distance: 80,
                                 links: {
-                                    opacity: 0.4,
+                                    opacity: 0.6,
                                     color: "#000000"
                                 }
                             },
                             bubble: {
-                                distance: 300,    // Distance to activate
-                                size: 3,         // Size when bubbled
+                                distance: 200,    // Distance to activate
+                                size: 2,         // Size when bubbled
                                 duration: 0.35,   // Animation duration
-                                opacity: 0.3     // Opacity when bubbled
+                                opacity: 1.0     // Opacity when bubbled
                             },
                         }
                     },
