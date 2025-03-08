@@ -120,11 +120,11 @@ export const BackgroundParticles: React.FC = () => {
                             }
                         },
                         size: {
-                            value: 1.5,
+                            value: 2.0,
                             random: true,
                             animation: {
                                 enable: true,
-                                speed: 1,
+                                speed: 3,
                                 minimumValue: 0.5,
                                 sync: false
                             }
@@ -133,8 +133,8 @@ export const BackgroundParticles: React.FC = () => {
                             enable: true,
                             distance: 100,
                             color: "#000000",
-                            opacity: 0.05,
-                            width: 0.2
+                            opacity: 0.3,
+                            width: 0.1
                         },
                         move: {
                             enable: true,
@@ -161,7 +161,7 @@ export const BackgroundParticles: React.FC = () => {
                         },
                         modes: {
                             grab: {
-                                distance: 80,
+                                distance: 50,
                                 links: {
                                     opacity: 0.6,
                                     color: "#000000"
@@ -169,7 +169,7 @@ export const BackgroundParticles: React.FC = () => {
                             },
                             bubble: {
                                 distance: 200,    // Distance to activate
-                                size: 2,         // Size when bubbled
+                                size: 3,         // Size when bubbled
                                 duration: 0.35,   // Animation duration
                                 opacity: 1.0     // Opacity when bubbled
                             },

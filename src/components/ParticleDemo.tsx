@@ -47,7 +47,7 @@ export const DemoParticles: React.FC<ParticlesComponentProps> = ({
     }, []);
 
     return (
-        <div ref={containerRef} className={`relative flex-1 ${className}`} style={{ minHeight: '400px' }}>
+        <div ref={containerRef} className={`relative flex-1 ${className}`} style={{ minHeight: '350px' }}>
             <Particles
                 id="tsparticles-demo"
                 init={particlesInit}
@@ -63,10 +63,10 @@ export const DemoParticles: React.FC<ParticlesComponentProps> = ({
                     },
                     particles: {
                         number: {
-                            value: 120,
+                            value: 80,
                             density: {
                                 enable: true,
-                                area: 800
+                                area: 600
                             }
                         },
                         color: {

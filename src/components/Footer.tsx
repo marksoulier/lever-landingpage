@@ -1,69 +1,116 @@
 import React from "react";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScroll = async (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      await navigate('/');
+    }
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
-    <footer className="flex flex-wrap gap-10 self-stretch px-20 pt-14 pb-24 mt-10 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
-      <div className="self-start text-base leading-8 text-center text-gray-400">
+    <footer className="flex flex-col sm:flex-row justify-between gap-8 px-6 sm:px-8 pt-10 pb-12 mt-10 w-full">
+      <div className="flex flex-col items-center sm:items-start">
         <a href="/" onClick={scrollToTop} className="cursor-pointer">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/7cbfb130182046beab226ee58fb45705/66109427f51d13b61bfcf5f51a0cc5377af2ea28b77ffdea345e1dfec9d3c541?placeholderIfAbsent=true"
             alt="Company Logo"
-            className="object-contain aspect-[2.28] w-[89px] max-md:mr-2"
+            className="object-contain w-[100px] h-auto"
           />
         </a>
-        <p className="mt-8 max-md:mt-4">©2025Lever</p>
+        <p className="mt-4 text-sm text-gray-400">©2025 Lever</p>
       </div>
-      <nav className="flex-auto max-md:max-w-full ml-auto">
-        <div className="flex justify-end gap-6 max-md:flex-col">
-          <div className="w-[15%] max-md:w-full">
-            <div className="flex flex-col items-start text-base leading-8 text-gray-600 max-md:mt-10">
-              <h3 className="text-lg font-medium leading-loose text-black font-['Poppins']">
-                Product
-              </h3>
-              <a href="#pricing" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
-                Pricing
-              </a>
-              <a href="#technology" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
-                Technology
-              </a>
-            </div>
+
+      <nav className="flex flex-wrap justify-center sm:justify-end gap-8 sm:gap-12 w-full sm:w-auto">
+        <div className="flex flex-col items-center sm:items-start min-w-[120px]">
+          <h3 className="text-base font-medium text-black mb-3 font-['Poppins']">
+            Product
+          </h3>
+          <div className="flex flex-col items-center sm:items-start gap-2">
+            <a
+              href="/#pricing"
+              onClick={(e) => handleScroll(e, 'pricing')}
+              className="text-sm text-gray-600 hover:text-[var(--primary-500)] transition-colors font-['Spline_Sans']"
+            >
+              Pricing
+            </a>
+            <a
+              href="/#technology"
+              onClick={(e) => handleScroll(e, 'technology')}
+              className="text-sm text-gray-600 hover:text-[var(--primary-500)] transition-colors font-['Spline_Sans']"
+            >
+              Technology
+            </a>
           </div>
-          <div className="w-[15%] max-md:w-full">
-            <div className="flex flex-col grow items-start text-base leading-8 text-gray-600 max-md:mt-10">
-              <h3 className="text-lg font-medium leading-loose text-black">
-                Engage
-              </h3>
-              <a href="#faq" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
-                FAQ
-              </a>
-              <a href="#about" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
-                About Us
-              </a>
-              <a href="#privacy" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
-                Privacy Policy
-              </a>
-              <a href="#terms" className="mt-3 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']">
-                Terms of Service
-              </a>
-            </div>
+        </div>
+
+        <div className="flex flex-col items-center sm:items-start min-w-[120px]">
+          <h3 className="text-base font-medium text-black mb-3 font-['Poppins']">
+            Engage
+          </h3>
+          <div className="flex flex-col items-center sm:items-start gap-2">
+            <a
+              href="/#faq"
+              onClick={(e) => handleScroll(e, 'faq')}
+              className="text-sm text-gray-600 hover:text-[var(--primary-500)] transition-colors font-['Spline_Sans']"
+            >
+              FAQ
+            </a>
+            <a
+              href="/#about"
+              onClick={(e) => handleScroll(e, 'about')}
+              className="text-sm text-gray-600 hover:text-[var(--primary-500)] transition-colors font-['Spline_Sans']"
+            >
+              About Us
+            </a>
+            <a
+              href="/#privacy"
+              onClick={(e) => handleScroll(e, 'privacy')}
+              className="text-sm text-gray-600 hover:text-[var(--primary-500)] transition-colors font-['Spline_Sans']"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/#terms"
+              onClick={(e) => handleScroll(e, 'terms')}
+              className="text-sm text-gray-600 hover:text-[var(--primary-500)] transition-colors font-['Spline_Sans']"
+            >
+              Terms of Service
+            </a>
           </div>
-          <div className="w-[20%] max-md:w-full">
-            <div className="flex flex-col max-md:mt-10">
-              <h3 className="self-start text-lg font-medium leading-loose text-black">
-                Partner
-              </h3>
-              <a
-                href="#partner"
-                className="mt-3 text-base leading-8 text-gray-600 hover:text-[var(--primary-500)] hover:bg-white font-['Spline_Sans']"
-              >
-                Become a Partner
-              </a>
-            </div>
+        </div>
+
+        <div className="flex flex-col items-center sm:items-start min-w-[120px]">
+          <h3 className="text-base font-medium text-black mb-3 font-['Poppins']">
+            Partner
+          </h3>
+          <div className="flex flex-col items-center sm:items-start gap-2">
+            <a
+              href="/#partner"
+              onClick={(e) => handleScroll(e, 'partner')}
+              className="text-sm text-gray-600 hover:text-[var(--primary-500)] transition-colors font-['Spline_Sans']"
+            >
+              Become a Partner
+            </a>
           </div>
         </div>
       </nav>

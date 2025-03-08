@@ -15,6 +15,8 @@ export const TeamMember: React.FC<TeamMemberProps> = ({
   linkedin,
   image,
 }) => {
+  const linkedinUrl = linkedin.startsWith('http') ? linkedin : `https://${linkedin}`;
+
   return (
     <article className="flex flex-col grow items-center text-base leading-8 text-black max-md:mt-10">
       <img
@@ -29,7 +31,7 @@ export const TeamMember: React.FC<TeamMemberProps> = ({
         {email}
       </a>
       <a
-        href={linkedin}
+        href={linkedinUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="self-stretch mt-2 hover:text-sky-600"

@@ -36,7 +36,7 @@ const KnowledgeGraphExplanation: React.FC = () => {
         <p className="mt-4">Learn more by reading our article</p>
       </div>
       <div className="flex justify-center mt-10">
-        <Button variant="outline" href="https://cal.com/lever-ai/lever-ai-demo">Learn More</Button>
+        <Button variant="outline" href="/articles/knowledge-graphs">Learn More</Button>
       </div>
     </article>
   );
