@@ -57,7 +57,7 @@ export const DemoParticles: React.FC<ParticlesComponentProps> = ({
                     fullScreen: {
                         enable: false
                     },
-                    fpsLimit: 60,
+                    fpsLimit: 30,
                     background: {
                         color: "transparent",
                     },

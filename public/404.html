@@ -5,32 +5,43 @@
     <meta charset="utf-8">
     <title>Lever AI</title>
     <script type="text/javascript">
-        // Single Page Apps for GitHub Pages
-        // MIT License
-        // https://github.com/rafgraph/spa-github-pages
-        // This script takes the current URL and converts the path and query
-        // string into just a query string, and then redirects the browser
-        // to the new URL with only a query string and hash fragment,
-        // e.g. https://www.foo.tld/one/two?a=b&c=d#qwe, becomes
-        // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
-        // Note: this 404.html file must be at least 512 bytes for it to work
-        // with Internet Explorer (it is currently > 512 bytes)
+        (function () {
+            // Debugging function
+            function debug(message) {
+                console.log('404 Debug:', message);
+                // Also show in the DOM for cases where console isn't accessible
+                var debugDiv = document.getElementById('debug-info');
+                if (debugDiv) {
+                    debugDiv.innerHTML += message + '<br>';
+                }
+            }
 
-        var pathSegmentsToKeep = 1;
+            // Get the current path
+            var path = window.location.pathname;
+            debug('Current path: ' + path);
+            debug('Full URL: ' + window.location.href);
 
-        var l = window.location;
-        l.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-            l.hash
-        );
+            // Only redirect for known routes
+            if (path === '/articles/knowledge-graphs') {
+                debug('Known route detected, redirecting with path parameter');
+                var redirectUrl = 'https://lever-ai.com/?p=' + encodeURIComponent(path);
+                debug('Redirecting to: ' + redirectUrl);
+                window.location.href = redirectUrl;
+            } else {
+                debug('Unknown route, redirecting to home');
+                window.location.href = 'https://lever-ai.com';
+            }
+        })();
     </script>
 </head>
 
 <body>
-    <p>Redirecting to home page...</p>
+    <h1>Page Not Found</h1>
+    <p>Redirecting...</p>
+    <div id="debug-info" style="background: #f0f0f0; padding: 10px; margin: 10px; font-family: monospace;">
+        <strong>Debug Information:</strong><br>
+    </div>
+    <p>If you are not redirected, <a href="https://lever-ai.com">click here</a>.</p>
 </body>
 
 </html>

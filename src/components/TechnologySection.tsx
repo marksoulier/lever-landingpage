@@ -44,8 +44,8 @@ const KnowledgeGraphExplanation: React.FC = () => {
 
 const GraphVisualization: React.FC = () => {
   return (
-    <section className="flex-1 max-md:mt-12">
-      <div className="flex flex-col items-center gap-8 w-full mt-20">
+    <section className="flex-1 max-md:mt-0">
+      <div className="flex flex-col items-center gap-8 w-full mt-20 max-md:mt-8">
         <img
           src={Example}
           alt="Customer"
@@ -68,11 +68,11 @@ export const TechnologySection: React.FC = () => {
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Poppins:wght@400;700&display=swap"
         rel="stylesheet"
       />
-      <section className="px-5 py-10 mx-auto my-0 max-w-[1400px] mt-60" id="technology">
-        <h1 className="mb-16 text-5xl font-medium text-center max-sm:text-3xl text-[var(--accent-950)] font-['Poppins']">
+      <section className="px-5 py-10 mx-auto my-0 max-w-[1400px] mt-60 max-md:mt-32" id="technology">
+        <h1 className="mb-16 text-5xl max-md:text-6xl font-medium text-center max-sm:text-4xl text-[var(--accent-950)] font-['Poppins']">
           Technology
         </h1>
-        <div className="flex gap-24 max-md:flex-col">
+        <div className="flex gap-24 max-md:flex-col max-md:gap-12">
           <KnowledgeGraphExplanation />
           <GraphVisualization />
         </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { Layout } from './Layout';
 import ReactMarkdown from 'react-markdown';
 import { Button } from './Button';
@@ -11,10 +11,14 @@ interface TableOfContentsItem {
     level: number;
 }
 
-export const ArticlePage: React.FC = () => {
-    const { slug } = useParams<{ slug: string }>();
+interface ArticlePageProps {
+    articleId: string;
+}
+
+export const ArticlePage: React.FC<ArticlePageProps> = ({ articleId }) => {
     const [article, setArticle] = useState<Article | null>(null);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<boolean>(false);
     const [tableOfContents, setTableOfContents] = useState<TableOfContentsItem[]>([]);
     const [isTocOpen, setIsTocOpen] = useState(false);
 
@@ -27,12 +31,105 @@ export const ArticlePage: React.FC = () => {
         return title.length > maxLength ? title.substring(0, maxLength) + '...' : title;
     };
 
+    // Update meta tags when article loads
+    useEffect(() => {
+        if (article) {
+            // Update title
+            document.title = `${article.meta.title} - Lever AI`;
+
+            // Update meta tags
+            updateMetaTag('description', article.meta.description);
+            updateMetaTag('author', article.meta.author);
+            updateMetaTag('og:title', article.meta.title);
+            updateMetaTag('og:description', article.meta.description);
+            updateMetaTag('og:type', 'article');
+            updateMetaTag('og:url', `https://lever-ai.com/articles/${articleId}`);
+            if (article.meta.image) {
+                updateMetaTag('og:image', article.meta.image);
+            }
+
+            // Add JSON-LD structured data
+            const jsonLd = {
+                '@context': 'https://schema.org',
+                '@type': 'Article',
+                headline: article.meta.title,
+                description: article.meta.description,
+                author: {
+                    '@type': 'Organization',
+                    name: article.meta.author
+                },
+                datePublished: article.meta.date,
+                image: article.meta.image,
+                publisher: {
+                    '@type': 'Organization',
+                    name: 'Lever AI',
+                    logo: {
+                        '@type': 'ImageObject',
+                        url: 'https://lever-ai.com/logo.png'
+                    }
+                }
+            };
+
+            let scriptTag = document.querySelector('#jsonld') as HTMLScriptElement;
+            if (!scriptTag) {
+                scriptTag = document.createElement('script');
+                scriptTag.id = 'jsonld';
+                scriptTag.setAttribute('type', 'application/ld+json');
+                document.head.appendChild(scriptTag);
+            }
+            scriptTag.textContent = JSON.stringify(jsonLd);
+        }
+
+        // Cleanup function
+        return () => {
+            // Reset title
+            document.title = 'Lever AI - Knowledge Graph Solutions';
+
+            // Remove JSON-LD
+            const scriptTag = document.querySelector('#jsonld');
+            if (scriptTag) {
+                scriptTag.remove();
+            }
+
+            // Reset meta tags
+            removeMetaTag('description');
+            removeMetaTag('author');
+            removeMetaTag('og:title');
+            removeMetaTag('og:description');
+            removeMetaTag('og:type');
+            removeMetaTag('og:url');
+            removeMetaTag('og:image');
+        };
+    }, [article, articleId]);
+
+    // Helper function to update meta tags
+    const updateMetaTag = (name: string, content: string) => {
+        let meta = document.querySelector(`meta[${name.startsWith('og:') ? 'property' : 'name'}="${name}"]`);
+        if (!meta) {
+            meta = document.createElement('meta');
+            meta.setAttribute(name.startsWith('og:') ? 'property' : 'name', name);
+            document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+    };
+
+    // Helper function to remove meta tags
+    const removeMetaTag = (name: string) => {
+        const meta = document.querySelector(`meta[${name.startsWith('og:') ? 'property' : 'name'}="${name}"]`);
+        if (meta) {
+            meta.remove();
+        }
+    };
+
     useEffect(() => {
         const loadArticle = async () => {
-            if (!slug) return;
-
             try {
-                const articleData = await getArticle(slug);
+                const articleData = await getArticle(articleId);
+                if (!articleData) {
+                    setError(true);
+                    setLoading(false);
+                    return;
+                }
                 setArticle(articleData);
 
                 // Extract only h1 and h2 headers from content
@@ -51,21 +148,19 @@ export const ArticlePage: React.FC = () => {
                 setTableOfContents(toc);
             } catch (error) {
                 console.error('Error loading article:', error);
+                setError(true);
             } finally {
                 setLoading(false);
             }
         };
 
         loadArticle();
-    }, [slug]);
+    }, [articleId]);
 
-    const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            setIsTocOpen(false); // Close mobile TOC after clicking
-        }
-    };
+    // Redirect to home if there's an error or invalid slug
+    if (error) {
+        return <Navigate to="/" replace />;
+    }
 
     if (loading) {
         return (
@@ -78,14 +173,16 @@ export const ArticlePage: React.FC = () => {
     }
 
     if (!article) {
-        return (
-            <Layout>
-                <div className="flex justify-center items-center min-h-screen">
-                    <h1 className="text-2xl text-[var(--accent-500)]">Article not found</h1>
-                </div>
-            </Layout>
-        );
+        return <Navigate to="/" replace />;
     }
+
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setIsTocOpen(false); // Close mobile TOC after clicking
+        }
+    };
 
     return (
         <Layout>

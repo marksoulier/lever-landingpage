@@ -5,7 +5,7 @@ import { PricingCard } from "./PricingCard";
 const Tables: React.FC = () => {
   return (
     <section className="rounded-3xl" id="pricing">
-      <h2 className="text-7xl font-medium text-center text-black leading-[50px] mb-25 mt-25 font-['Poppins']">
+      <h2 className="text-7xl max-md:text-5xl font-medium text-center text-black leading-[50px] mb-25 mt-25 font-['Poppins']">
         Choose your plan
       </h2>
       <div className="flex gap-5 max-md:flex-col">

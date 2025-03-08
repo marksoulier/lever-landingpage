@@ -5,13 +5,15 @@ import { ArticlePage } from './components/ArticlePage';
 
 function App() {
   return (
-    <Router basename="/">
-      <Routes>
-        <Route path="/" element={<Landingpage />} />
-        <Route path="/articles/:slug" element={<ArticlePage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landingpage />} />
+          <Route path="/articles/knowledge-graphs" element={<ArticlePage articleId="knowledge-graphs" />} />
+          {/* Redirect any other article paths to home */}
+          <Route path="/articles/*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Router>
   );
 }
 

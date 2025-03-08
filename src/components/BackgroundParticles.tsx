@@ -91,7 +91,7 @@ export const BackgroundParticles: React.FC = () => {
                         enable: false,
                         zIndex: 0
                     },
-                    fpsLimit: 60,
+                    fpsLimit: 30,
                     background: {
                         color: "transparent",
                     },

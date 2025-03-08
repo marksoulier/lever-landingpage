@@ -1,7 +1,7 @@
 ---
 title: Understanding Business Knowledge Graphs
 description: A deep dive into how knowledge graphs power modern business intelligence
-date: 2024-03-20
+date: 2025-03-09
 author: Lever AI Team
 category: Technology
 image: /images/example.jpg

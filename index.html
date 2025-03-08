@@ -3,23 +3,41 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Start: GitHub Pages SPA Routing Fix -->
+  <!-- Single Page App Routing Fix -->
   <script type="text/javascript">
-    // Single Page Apps for GitHub Pages
-    // MIT License
-    // https://github.com/rafgraph/spa-github-pages
-    (function (l) {
-      if (l.search[1] === '/') {
-        var decoded = l.search.slice(1).split('&').map(function (s) {
-          return s.replace(/~and~/g, '&')
-        }).join('?');
-        window.history.replaceState(null, null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
+    (function () {
+      // Debugging function
+      function debug(message) {
+        console.log('Index Debug:', message);
       }
-    }(window.location))
+
+      debug('Starting routing check');
+      debug('Hostname: ' + window.location.hostname);
+      debug('Full URL: ' + window.location.href);
+      debug('Search params: ' + window.location.search);
+
+      // Check if we're in production or development
+      var isProduction = window.location.hostname === 'lever-ai.com';
+      debug('Is production? ' + isProduction);
+
+      if (isProduction || window.location.hostname === 'localhost') {
+        if (window.location.search.includes('?p=')) {
+          debug('Found path parameter in URL');
+          var redirectPath = window.location.search.split('?p=')[1];
+          debug('Extracted path: ' + redirectPath);
+
+          // Decode the path if it was encoded
+          redirectPath = decodeURIComponent(redirectPath);
+          debug('Decoded path: ' + redirectPath);
+
+          window.history.replaceState(null, null, redirectPath);
+          debug('Updated URL to: ' + window.location.href);
+        } else {
+          debug('No path parameter found in URL');
+        }
+      }
+    })();
   </script>
-  <!-- End: GitHub Pages SPA Routing Fix -->
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

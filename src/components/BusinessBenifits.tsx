@@ -36,7 +36,7 @@ export const MaximizeRevenue: React.FC = () => {
 
 export const SaveTime: React.FC = () => {
     return (
-        <section className="flex gap-5 max-md:flex-col mb-30">
+        <section className="flex gap-5 max-md:flex-col-reverse mb-30">
             <div className="w-1/2 max-md:ml-0 max-md:w-full">
                 <div className="flex justify-center items-center w-full h-full">
                     <div className="relative inline-block">
@@ -66,10 +66,10 @@ export const SaveTime: React.FC = () => {
 export const BusinessBenefits: React.FC = () => {
     return (
         <article className="flex flex-col">
-            <div className="self-end w-full max-w-[1066px] max-md:max-w-full mt-20 z-10">
+            <div className="self-end w-full max-w-[1066px] max-md:max-w-full mt-20 max-md:mt-10 z-10">
                 <MaximizeRevenue />
             </div>
-            <div className="mt-16 w-full max-w-[1043px] max-md:mt-10 max-md:max-w-full">
+            <div className="mt-16 w-full max-w-[1043px] max-md:mt-8 max-md:max-w-full">
                 <SaveTime />
             </div>
         </article>
