@@ -36,11 +36,11 @@ const Tables: React.FC = () => {
             subtitle="For innovators"
             price={
               <div className="flex gap-2.5 items-center text-black whitespace-nowrap">
-                <span className="self-stretch my-auto text-5xl font-bold leading-none max-md:text-4xl font-['Poppins']">
+                <span className="self-stretch my-auto text-4xl font-bold leading-none max-md:text-4xl font-['Poppins']">
                   $300
                 </span>
-                <span className="self-stretch pt-5 my-auto text-xl font-medium leading-none w-[86px] font-['Poppins']">
-                  /monthly
+                <span className="self-stretch font-bold my-auto text-2xl font-medium leading-none w-[86px] font-['Poppins']">
+                  /month
                 </span>
               </div>
             }

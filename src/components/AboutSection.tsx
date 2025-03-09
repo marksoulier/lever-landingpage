@@ -7,17 +7,14 @@ import cgLogo from '../assets/cgLogo.png';
 
 export const AboutSection = () => {
   return (
-    <section className="mt-16 sm:mt-24 px-4 sm:px-8 text-3xl sm:text-5xl font-medium leading-none text-center text-black max-md:mt-10" id="about">
-      <h2>About</h2>
+    <section className="mt-16 sm:mt-24 px-4 sm:px-8 max-w-[1215px] mx-auto" id="about">
+      <h2 className="text-4xl sm:text-5xl font-medium leading-none text-[var(--accent-950)] max-md:mt-10 text-center font-poppins">About</h2>
       <div className="mt-16 sm:mt-24 w-full max-w-[1215px] max-md:mt-10 mx-auto">
         <div className="flex gap-5 max-md:flex-col">
           <div className="w-[62%] max-md:w-full">
-            <article className="text-sm sm:text-base leading-6 sm:leading-8 text-[var(--accent-700)]">
+            <article className="text-base leading-8 text-[var(--accent-500)] text-opacity-80">
               <p>
                 Lever is a startup dedicated to helping small and medium-sized businesses stay competitive in a data-driven economy. With advancements in technology, the same data collection and analytics once exclusive to large enterprises are now accessible to smaller companies. We bring big data insights to SMBs, making data-driven decision-making easier than ever.
-              </p>
-              <p className="mt-4 sm:mt-8">
-                Our journey began with a nonprofit called Common Grounds, whose mission is to enrich the lives of youth and adults with disabilities through quality outdoor recreation. They sought a way to better understand their data to enhance the experiences they provide. By improving data accessibility, they gained deeper insights, allowing them to tailor programs more effectively to the individuals they serve.
               </p>
             </article>
           </div>

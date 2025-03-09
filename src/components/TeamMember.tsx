@@ -18,7 +18,7 @@ export const TeamMember: React.FC<TeamMemberProps> = ({
   const linkedinUrl = linkedin.startsWith('http') ? linkedin : `https://${linkedin}`;
 
   return (
-    <article className="flex flex-col grow items-center text-base leading-8 text-black max-md:mt-10">
+    <article className="flex flex-col grow items-center text-[14px] leading-8 text-black max-md:mt-10">
       <img
         src={image}
         alt={name}
@@ -34,7 +34,7 @@ export const TeamMember: React.FC<TeamMemberProps> = ({
         href={linkedinUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="self-stretch mt-2 hover:text-sky-600"
+        className="self-stretch mt-2 hover:text-sky-600 text-center"
       >
         {linkedin}
       </a>

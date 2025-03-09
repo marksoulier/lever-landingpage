@@ -9,12 +9,14 @@ import { PageBreaker } from "./PageBreaker";
 import BusinessBenefits from "./BusinessBenifits";
 import Tables from "./Tables";
 import { Layout } from "./Layout";
+import { CaseStudy } from "./CaseStudy";
 
 export default function Landingpage() {
   return (
     <Layout>
       <HeroSection />
-      <FeatureCard />
+      {/* <FeatureCard /> */}
+      <PageBreaker className="my-20" />
       <BusinessFeatures />
       <PageBreaker className="my-20" />
       <BusinessBenefits />
@@ -22,6 +24,8 @@ export default function Landingpage() {
       <TechnologySection />
       <PageBreaker className="my-20" />
       <AboutSection />
+      <PageBreaker className="my-20" />
+      <CaseStudy />
       <PageBreaker className="my-20" />
     </Layout>
   );
