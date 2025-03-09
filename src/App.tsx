@@ -1,10 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { GoogleAnalytics } from './components/GoogleAnalytics';
 import Landingpage from './components/Landingpage';
 import { ArticlePage } from './components/ArticlePage';
 
 function App() {
   return (
+    <>
+      <GoogleAnalytics />
       <Router>
         <Routes>
           <Route path="/" element={<Landingpage />} />
@@ -14,6 +17,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
+    </>
   );
 }
 
