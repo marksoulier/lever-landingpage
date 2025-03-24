@@ -139,7 +139,7 @@ export const Header = () => {
         </nav>
         <div className="flex gap-4 items-center">
           <a
-            href="https://cal.com/lever-ai/lever-ai-demo"
+            href="https://lever-robotics.github.io/dynamic_frontend/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1.5 font-semibold transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white"
