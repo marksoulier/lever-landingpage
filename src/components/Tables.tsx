@@ -4,7 +4,7 @@ import { PricingCard } from "./PricingCard";
 
 const Tables: React.FC = () => {
   return (
-    <section className="rounded-3xl" id="pricing">
+    <section className="rounded-3xl mt-32" id="pricing">
       <h2 className="text-7xl max-md:text-5xl font-medium text-center text-black leading-[50px] mb-25 mt-25 font-['Poppins']">
         Start modeling your finances
       </h2>
