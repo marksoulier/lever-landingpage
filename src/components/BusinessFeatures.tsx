@@ -17,16 +17,15 @@ export const BusinessFeatures: React.FC = () => {
                     <img
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/e365d5c797403a00f5fa6422e97b6b8ad85479b5"
                         className="w-full h-auto max-w-[428px]"
-                        alt="Business diagram showing connected systems"
+                        alt="Financial timeline modeling illustration"
                     />
                 </div>
                 <article className="flex-1 max-w-[429px] max-md:max-w-full">
                     <h2 className="mb-6 text-5xl font-medium text-black leading-[50px] max-md:text-3xl max-md:leading-10 max-sm:text-2xl max-sm:leading-9 font-['Poppins']">
-                        Your business Your way
+                        Your finances, modeled clearly
                     </h2>
                     <p className="mb-8 text-base leading-8 text-gray-600 max-sm:text-md max-sm:leading-7 font-['Spline_Sans']">
-                        Lever software molds around your business systems to give you a
-                        single point of data retrieval and AI business understanding.
+                        Lever helps you model financial situations over time so you can see how your choices affect your long-term outcomes.
                     </p>
                     <FeatureList />
                 </article>
@@ -36,10 +35,10 @@ export const BusinessFeatures: React.FC = () => {
 };
 
 const features = [
-    "Connect to all your systems",
-    "Gain visibility of your businesses moving parts",
-    "Make informed decisions",
-    "Brainstorm ideas with AI analysis of your business",
+    "Model rent vs. buy decisions with full financial context",
+    "Compare retirement account strategies (Roth vs. 401k)",
+    "Explore safe spending levels for major purchases",
+    "Simulate timeline changes and investment scenarios",
 ];
 
 export const FeatureList: React.FC = () => (

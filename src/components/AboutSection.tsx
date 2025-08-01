@@ -14,7 +14,7 @@ export const AboutSection = () => {
           <div className="w-[62%] max-md:w-full">
             <article className="text-base leading-8 text-[var(--accent-500)] text-opacity-80">
               <p>
-                Lever is a startup dedicated to helping small and medium-sized businesses stay competitive in a data-driven economy. With advancements in technology, the same data collection and analytics once exclusive to large enterprises are now accessible to smaller companies. We bring big data insights to SMBs, making data-driven decision-making easier than ever.
+                Lever is a personal financial planning tool built for people who want more clarity around their financial future. We help individuals model financial events over time so they can see how their choices play out. Rather than giving advice, we give people the tools to explore alternatives and make informed decisions about their money.
               </p>
             </article>
           </div>

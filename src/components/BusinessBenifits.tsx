@@ -10,11 +10,10 @@ export const MaximizeRevenue: React.FC = () => {
             <div className="w-1/2 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col mt-14 max-md:mt-10">
                     <h2 className="self-start text-5xl text-black leading-[70px] font-['Poppins']">
-                        Maximize Revenue
+                        Make informed decisions
                     </h2>
                     <p className="mt-7 text-base leading-8 text-black font-['Spline_Sans']">
-                        Plan your business decisions around your current business systems
-                        for maximum revenue.{" "}
+                        Model your income, expenses, and life events on a timeline to understand the long-term impact of your financial choices.{" "}
                     </p>
                 </div>
             </div>
@@ -52,10 +51,10 @@ export const SaveTime: React.FC = () => {
             <div className="w-1/2 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col self-stretch my-auto max-md:mt-10">
                     <h2 className="self-start text-5xl text-black leading-[70px] font-['Poppins']">
-                        Save Time
+                        Spend with confidence
                     </h2>
                     <p className="mt-6 text-base leading-8 text-black font-['Spline_Sans']">
-                        Make your business systems more efficient to save time and money{" "}
+                        See how major purchases affect your financial trajectory and find the safe spending limits for vacations, cars, or other goals.{" "}
                     </p>
                 </div>
             </div>

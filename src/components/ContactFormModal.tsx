@@ -128,23 +128,39 @@ export const ContactFormModal: React.FC<ContactFormModalProps> = ({
 
                 {!isSubmitted ? (
                     <>
+                        <div className="bg-primary/5 border-b border-primary/10 p-6 -m-8 mb-6">
+                            <div className="text-center">
+                                <p className="text-sm text-muted-foreground mb-2">
+                                    ✨ <strong>Become a UX Tester</strong> - Share 1 hour of feedback with our financial coach
+                                </p>
+                                <p className="text-xs text-muted-foreground mb-3">
+                                    Get lifetime access to premium features in exchange for helping us improve the tool
+                                </p>
+                                <a
+                                    href="https://cal.com/lever-ai/financial-planner-ux-tester"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm font-medium transition-colors"
+                                >
+                                    Schedule UX Session →
+                                </a>
+                            </div>
+                        </div>
                         <h2 className="text-4xl font-medium text-black mb-6 font-['Poppins']">
-                            {planTitle === 'Discover' ? 'Free Discovery Account' :
-                                planTitle === 'Design Partner' ? 'Become a Design Partner' :
-                                    'Full Power with Enterprise'}
+                            Join Our Newsletter
                         </h2>
                         <form onSubmit={handleSubmit} className="space-y-6" id="contact-form">
                             <div>
-                                <label htmlFor="business_name" className="block text-base font-medium text-slate-500 mb-2 font-['Spline_Sans']">
-                                    Business Name
+                                <label htmlFor="from_name" className="block text-base font-medium text-slate-500 mb-2 font-['Spline_Sans']">
+                                    Name
                                 </label>
                                 <input
-                                    id="business_name"
+                                    id="from_name"
                                     type="text"
-                                    name="business_name"
-                                    value={formData.business_name}
+                                    name="from_name"
+                                    value={formData.from_name}
                                     onChange={handleChange}
-                                    placeholder="Your Company Name"
+                                    placeholder="Your Name"
                                     required
                                     className="w-full px-4 py-3 border border-[#EFF0F6] rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary-400)] text-base font-['Spline_Sans'] transition-all duration-200"
                                 />
@@ -181,7 +197,7 @@ export const ContactFormModal: React.FC<ContactFormModalProps> = ({
                             </div>
                             <div>
                                 <label htmlFor="phone" className="block text-base font-medium text-slate-500 mb-2 font-['Spline_Sans']">
-                                    Phone Number
+                                    Phone Number (Optional)
                                 </label>
                                 <input
                                     id="phone"
@@ -209,33 +225,25 @@ export const ContactFormModal: React.FC<ContactFormModalProps> = ({
                     </>
                 ) : (
                     <div className="text-center py-8 transform transition-all duration-300 ease-in-out">
-                        <h3 className="text-4xl font-medium mb-4 text-black font-['Poppins']">Successfully Submitted</h3>
+                        <h3 className="text-4xl font-medium mb-4 text-black font-['Poppins']">Get Early Access!</h3>
                         <div className="space-y-4 mb-8">
                             <p className="text-base leading-8 text-slate-500 font-['Spline_Sans']">
-                                {planTitle === 'Discover'
-                                    ? "Get started with your free discovery account!"
-                                    : planTitle === 'Design Partner'
-                                        ? "Welcome to the Lever AI Design Partner program!"
-                                        : "Welcome to Lever AI Enterprise!"}
+                                Thanks for joining our newsletter! Want to get <span className="font-bold">lifetime access to premium features for free</span>?
                             </p>
                             <p className="text-base leading-8 text-slate-500 font-['Spline_Sans']">
-                                {planTitle === 'Discover'
-                                    ? <>Schedule a <span className="font-bold">quick setup call</span> to maximize your free trial experience.</>
-                                    : planTitle === 'Design Partner'
-                                        ? <>Let's discuss your <span className="font-bold">vision and requirements</span> in a personalized setup meeting.</>
-                                        : <>Book a <span className="font-bold">comprehensive demo</span> to explore full enterprise capabilities.</>}
+                                Join our UX testing team and share your feedback with our financial coach. It only takes 1 hour!
                             </p>
                         </div>
-                        <a
-                            href={planTitle === 'Discover'
-                                ? "https://cal.com/lever-ai/lever-ai-free-setup"
-                                : "https://cal.com/lever-ai/lever-ai-demo"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center h-[60px] px-12 bg-[var(--primary-500)] text-white rounded-[50px] hover:bg-[var(--primary-600)] transition-colors duration-300 font-medium text-lg font-['Poppins'] mx-auto"
-                        >
-                            {planTitle === 'Discover' ? 'Schedule Free Setup' : 'Schedule Setup Meeting'}
-                        </a>
+                        <div className="flex flex-col gap-4 items-center">
+                            <a
+                                href="https://cal.com/lever-ai/financial-planner-ux-tester"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center h-[60px] px-12 bg-[var(--primary-500)] text-white rounded-[50px] hover:bg-[var(--primary-600)] transition-colors duration-300 font-medium text-lg font-['Poppins']"
+                            >
+                                Schedule UX Session →
+                            </a>
+                        </div>
                     </div>
                 )}
             </div>

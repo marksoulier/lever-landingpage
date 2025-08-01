@@ -97,16 +97,14 @@ export const Header = () => {
         </a>
         <div className="mt-4 w-full flex flex-col gap-4">
           <a
-            href="https://cal.com/lever-ai/lever-ai-demo"
+            href="https://app.lever-ai.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full px-4 py-2 text-center font-semibold bg-white/20 hover:bg-white/40 rounded-lg transition-all duration-300 text-gray-700"
           >
             Sign In
           </a>
-          <Button variant="outline" href="https://cal.com/lever-ai/lever-ai-demo" className="w-full">
-            Demo
-          </Button>
+          <Button variant="outline" href="https://cal.com/lever-ai/financial-planner-ux-tester">Demo</Button>
         </div>
       </div>
 
@@ -139,14 +137,14 @@ export const Header = () => {
         </nav>
         <div className="flex gap-4 items-center">
           <a
-            href="https://lever-robotics.github.io/dynamic_frontend/"
+            href="https://app.lever-ai.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-1.5 font-semibold transition-all duration-300 ease-in-out cursor-pointer rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white"
           >
             Sign In
           </a>
-          <Button variant="outline" href="https://cal.com/lever-ai/lever-ai-demo">Demo</Button>
+          <Button variant="outline" href="https://cal.com/lever-ai/financial-planner-ux-tester">Demo</Button>
         </div>
       </div>
     </header>

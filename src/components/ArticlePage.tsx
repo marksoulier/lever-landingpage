@@ -2,8 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { Layout } from './Layout';
 import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 import { Button } from './Button';
 import { Article, getArticle } from '../utils/markdownLoader';
+import VideoPlayer from './VideoPlayer';
+import aprVideo from '../data/aprvsapy.mp4';
+
+// Map of video IDs to their sources
+const videoMap: Record<string, string> = {
+    'aprvsapy': aprVideo,
+};
 
 interface TableOfContentsItem {
     id: string;
@@ -266,6 +276,8 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({ articleId }) => {
                     <div className="lg:pr-[340px]">
                         <div className="prose prose-sm sm:prose lg:prose-xl text-[var(--accent-500)] text-opacity-80">
                             <ReactMarkdown
+                                remarkPlugins={[remarkMath]}
+                                rehypePlugins={[rehypeKatex]}
                                 components={{
                                     h1: ({ children }) => (
                                         <h1 id={toId(children as string)} className="scroll-mt-32 mb-8 sm:mb-12 text-3xl sm:text-4xl font-medium text-[var(--accent-800)] font-['Poppins']">
@@ -297,11 +309,31 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({ articleId }) => {
                                             {children}
                                         </li>
                                     ),
-                                    code: ({ children }) => (
-                                        <code className="bg-[var(--accent-100)] px-2 py-1 rounded text-[var(--accent-800)] text-sm">
-                                            {children}
-                                        </code>
-                                    ),
+                                    code: ({ className, children }) => {
+                                        // Handle video blocks
+                                        if (className?.startsWith('language-video:')) {
+                                            const videoId = className.split(':')[1];
+                                            const videoSrc = videoMap[videoId];
+                                            if (!videoSrc) {
+                                                console.error(`Video not found: ${videoId}`);
+                                                return null;
+                                            }
+                                            return (
+                                                <div className="my-8 sm:my-16 w-full">
+                                                    <VideoPlayer
+                                                        src={videoSrc}
+                                                        className="rounded-lg shadow-lg aspect-video"
+                                                    />
+                                                </div>
+                                            );
+                                        }
+                                        // Regular code blocks
+                                        return (
+                                            <code className="bg-[var(--accent-100)] px-2 py-1 rounded text-[var(--accent-800)] text-sm">
+                                                {children}
+                                            </code>
+                                        );
+                                    },
                                     img: ({ src, alt }) => (
                                         <div className="my-8 sm:my-16 w-full">
                                             <img
