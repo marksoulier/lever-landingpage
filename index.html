@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Single Page App Routing Fix -->
+  <script type="text/javascript">
+    (function () {
+      // Debugging function
+      function debug(message) {
+        console.log('Index Debug:', message);
+      }
+
+      debug('Starting routing check');
+      debug('Hostname: ' + window.location.hostname);
+      debug('Full URL: ' + window.location.href);
+      debug('Search params: ' + window.location.search);
+
+      // Check if we're in production or development
+      var isProduction = window.location.hostname === 'lever-ai.com';
+      debug('Is production? ' + isProduction);
+
+      if (isProduction || window.location.hostname === 'localhost') {
+        if (window.location.search.includes('?p=')) {
+          debug('Found path parameter in URL');
+          var redirectPath = window.location.search.split('?p=')[1];
+          debug('Extracted path: ' + redirectPath);
+
+          // Decode the path if it was encoded
+          redirectPath = decodeURIComponent(redirectPath);
+          debug('Decoded path: ' + redirectPath);
+
+          window.history.replaceState(null, null, redirectPath);
+          debug('Updated URL to: ' + window.location.href);
+        } else {
+          debug('No path parameter found in URL');
+        }
+      }
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Lever - Model Your Financial Future</title>
+  <meta name="title" content="Lever - Model Your Financial Future" />
+  <meta name="description"
+    content="Model financial events over time to see how your choices play out. Make informed decisions about retirement, housing, investments, and more with timeline-based financial planning." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lever-ai.com/" />
+  <meta property="og:title" content="Lever - Model Your Financial Future" />
+  <meta property="og:description"
+    content="Model financial events over time to see how your choices play out. Make informed decisions about retirement, housing, investments, and more with timeline-based financial planning." />
+  <meta property="og:image" content="https://lever-ai.com/logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://lever-ai.com/" />
+  <meta property="twitter:title" content="Lever - Model Your Financial Future" />
+  <meta property="twitter:description"
+    content="Model financial events over time to see how your choices play out. Make informed decisions about retirement, housing, investments, and more with timeline-based financial planning." />
+  <meta property="twitter:image" content="https://lever-ai.com/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spline+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-BlCMnrzK.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DORdoy_H.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

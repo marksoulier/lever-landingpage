@@ -1,0 +1,40 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1200" height="630" fill="#0F172A"/>
+    
+    <!-- Gradient Overlay -->
+    <rect width="1200" height="630" fill="url(#gradient)"/>
+    
+    <!-- Logo -->
+    <g transform="translate(100, 180)">
+        <rect width="96" height="96" rx="24" fill="#0EA5E9"/>
+        <path d="M24 24H72V36H24V24Z" fill="white"/>
+        <path d="M24 42H48V78H24V42Z" fill="white"/>
+        <path d="M54 42H72V54H54V42Z" fill="white"/>
+        <path d="M54 60H72V72H54V60Z" fill="white"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="220" y="230" fill="white" font-family="system-ui" font-size="64" font-weight="bold">
+        Lever AI
+    </text>
+    <text x="220" y="300" fill="#94A3B8" font-family="system-ui" font-size="32">
+        Transform your business data into actionable insights
+    </text>
+    <text x="220" y="350" fill="#94A3B8" font-family="system-ui" font-size="32">
+        with advanced knowledge graph technology
+    </text>
+    
+    <!-- Decorative Elements -->
+    <path d="M1000 100C1050 150 1100 200 1150 250" stroke="#0EA5E9" stroke-width="4"/>
+    <circle cx="1050" cy="150" r="8" fill="#0EA5E9"/>
+    <circle cx="1100" cy="200" r="8" fill="#0EA5E9"/>
+    
+    <!-- Gradient Definition -->
+    <defs>
+        <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#0F172A"/>
+            <stop offset="1" stop-color="#1E293B"/>
+        </linearGradient>
+    </defs>
+</svg> 
